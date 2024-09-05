@@ -1,0 +1,134 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #D5DBDB;
+}
+
+header{
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h2{
+    margin: 0;
+    text-align: center;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover{
+    background-color: #555;
+}
+
+.container {
+  height: 200px;
+  width: 350px;
+  border-radius: 1em;
+  overflow: hidden;
+  box-shadow: 0 10px 20px #dbdbdb;
+  font-family: sans-serif;
+}
+
+.palette {
+  display: flex;
+  height: 86%;
+  width: 100%;
+}
+
+.color {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: flex 0.1s linear;
+  position: relative; /* Agregado para permitir la superposición de la imagen */
+}
+
+.color span {
+  position: absolute; /* Agregado para superponer el texto sobre la imagen */
+  z-index: 1; /* Agregado para superponer el texto sobre la imagen */
+  opacity: 0;
+  transition: opacity 0.1s linear;
+}
+
+.color img { /* Agregado para estilizar la imagen */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.color:nth-child(1) {
+  background: #264653;
+}
+
+.color:nth-child(2) {
+  background: #2a9d8f;
+}
+
+.color:nth-child(3) {
+  background: #e9c46a;
+}
+
+.color:nth-child(4) {
+  background: #f4a261;
+}
+
+.color:nth-child(5) {
+  background: #e76f51;
+}
+
+.color:hover {
+  flex: 2;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.color:hover span {
+  opacity: 1;
+}
+
+#stats {
+  height: 14%;
+  width: 100%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5em;
+  box-sizing: border-box;
+  color: #bebebe;
+}
+
+#stats svg {
+  fill: #bebebe;
+  transform: scale(1.2);
+}
